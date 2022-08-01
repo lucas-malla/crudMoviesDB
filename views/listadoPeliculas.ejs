@@ -1,0 +1,18 @@
+<%-  include('head')%> 
+<%-  include('header')%> 
+    <div class="listado">
+
+        <h1>Listo de pelis</h1>
+       
+        <ul>
+            <% for (let i = 0; i< pelicula.length; i++)  { %> 
+                <li>
+                    <a href="/peliculas/<%=pelicula[i].id %> " class="listado-a">
+                        <%= pelicula[i].title %> 
+                    </a>
+                </li>
+                <% } %> 
+            </ul>
+    </div>
+<%-  include('footer')%> 
+  

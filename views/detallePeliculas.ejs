@@ -1,0 +1,42 @@
+<%-  include('head')%> 
+<%-  include('header')%> 
+    <h1> <%= pelicula.title%> </h1>
+    
+    <ul>
+        <li>
+           Duracion: <%= pelicula.length%> 
+        </li>
+        <li>
+            Fecha de Estreno: <%= pelicula.release_date%> 
+         </li>
+         <li>
+            Premios: <%= pelicula.awards%> 
+         </li>
+         <li>
+            Rating: <%= pelicula.rating%> 
+         </li>
+         <li>
+            Genero: <%= pelicula.genero.name%> 
+         </li>
+         <li>
+              Actores: 
+              <ul>
+                  
+                  <li>
+                    //ver first_name,  last_name por que no lo toma.
+                  </li>
+                 
+              </ul> 
+         </li>
+    </ul>
+
+    <a href="/peliculas/editar/<%= pelicula.id %> ">
+       <button>Editar</button>
+    </a>
+
+   <form action="/peliculas/borrar/<%= pelicula.id %> " method="POST">
+      <button type="submit">Borrar</button>
+   </form>
+ 
+<%-  include('footer')%> 
+  

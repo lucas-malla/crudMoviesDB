@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+.listado {
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.listado-a:hover{
+    color: aqua;
+}
+
+@media screen and (max-width:800px){
+    .listado{
+        width: 100%;
+    }
+}

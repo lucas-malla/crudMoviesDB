@@ -1,0 +1,52 @@
+<%-  include('head')%> 
+<%- include('header')%>
+
+
+   <h1> Editar Peliculas</h1>
+     
+   <form action="/peliculas/editar/<%= pelicula.id %> " method="POST">
+      <div>
+         <label for="">Titulo</label>
+         <input type="text" name="titulo" value="<%= pelicula.title %> ">
+      </div>
+
+      <div>
+         <label for="">Premios</label>
+         <input type="text" name="premios" value="<%= pelicula.awards %> ">
+      </div>
+
+      <div>
+         <label for="">Duracion</label>
+         <input type="text" name="length" value="<%= pelicula.length %> " >
+      </div>
+
+      <div>
+         <label for="">Rating</label>
+         <input type="text" name="rating" value="<%= pelicula.rating %> ">
+      </div>
+
+      <div>
+         <label for="">Fecha de estreno</label>
+         <input type="date" name="release_date" >
+      </div>
+
+      <div>
+         <label for="">Generos</label>
+         <select name="genero" >
+            <% for (let i = 0; i< genero.length; i++)  { %>
+                <% if (genero[i].id == pelicula.genre_id) { %> 
+               <option value="<%= genero[i].id%>" >
+                 <%= genero[i].name %> 
+               </option>
+               <% } else { %> 
+                <option value="<%= genero[i].id%>">
+                    <%= genero[i].name %> 
+                </option>
+                <% } %> 
+                <% } %> 
+         </select>
+         <button type="submit">Editar!!!</button>
+      </div>
+   </form>
+
+<%- include('footer')%> 
